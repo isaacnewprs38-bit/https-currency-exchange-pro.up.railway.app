@@ -227,3 +227,6 @@ app.get('/api/convert', (req, res) => {
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
 });
+// Connect M-Pesa routes
+const mpesaRoutes = require('./mpesa');
+app.use('/api', mpesaRoutes);
