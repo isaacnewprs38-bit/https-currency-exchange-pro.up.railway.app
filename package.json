@@ -13,7 +13,9 @@
     "jsonwebtoken": "^9.0.2",
     "pg": "^8.11.3",
     "stripe": "^14.24.0",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+"axios": "^1.6.0"
+
   },
   "engines": {
     "node": ">=18"
