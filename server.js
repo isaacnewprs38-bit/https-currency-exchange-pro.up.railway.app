@@ -221,12 +221,13 @@ app.get('/api/convert', (req, res) => {
   const fromRate = rates[from] || 1;
   const toRate = rates[to] || 1;
   const result = (parseFloat(amount) / fromRate) * toRate;
-  res.json({ result: parseFloat(result.toFixed(4)) });
-});
-
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server running on port ${PORT}`);
-});
+  res.json({ result: parseFloat(result.toFixed(4)) })
+    
 // Connect M-Pesa routes
 const mpesaRoutes = require('./mpesa');
 app.use('/api', mpesaRoutes);
+
+// Start the server LAST
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on port ${PORT}`);
+});     
