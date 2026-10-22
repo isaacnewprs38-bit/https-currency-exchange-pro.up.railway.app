@@ -47,8 +47,7 @@ router.post('/pay', async (req, res) => {
         Amount: amount,
         PartyA: phone, // Customer's phone number (e.g., 254712345678)
         PartyB: process.env.MPESA_SHORTCODE,
-        PhoneNumber: phone,
-        CallBackURL: `https://your-railway-url.up.railway.app/api/mpesa/callback`, // <-- REPLACE THIS
+ CALLBACKURL: 'https://https-currency-exchange.onrender.com/api/mpesa/callback<-- REPLACE THIS
         AccountReference: 'CurrencyExchange',
         TransactionDesc: 'Payment for currency exchange'
       },
