@@ -40,7 +40,7 @@ db.query(`
     result REAL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
   )
-`);
+`).catch(err => console.error("Conversions table error:", err));
 
 app.use(express.json());
 app.use(cors({ origin: true, credentials: true }));
