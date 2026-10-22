@@ -28,7 +28,7 @@ db.query(`
     active BOOLEAN DEFAULT TRUE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
   )
-`);
+`).catch(err => console.error("Users table error:", err));
 
 db.query(`
   CREATE TABLE IF NOT EXISTS conversions (
